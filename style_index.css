@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    justify-content: left;
+    
+}
+.box{
+    border: solid 1px;
+    width: 340px;
+    padding: 10px;
+    height: 100vh;
+}
+input{
+    height: 20px;
+    width: 250px;
+    border-radius: 10px;
+
+}
+.row{
+display: flex;
+  justify-content: left;
+  align-items: left;
+  
+}

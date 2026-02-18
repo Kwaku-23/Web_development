@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+    <link rel="stylesheet" href="final.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- ── FIRST SECTION: Header + Hero ── -->
+    <div class="colour">
+
+      <div class="Header">
+        <div class="left">Header Logo</div>
+        <div class="right">
+          <ul>
+            <li><a href="#">header link one</a></li>
+            <li><a href="#">header link two</a></li>
+            <li><a href="#">header link three</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="Second">
+        <div class="In1">
+          <!-- No change here, content was correct -->
+          <h2>This website is awesome</h2>
+          <main>This website has some subtext that goes here under the main title. It's 
+            smaller font and the color is lower contrast</main>
+          <button class="button">Sign up</button>
+        </div>
+        <div class="In2">
+          <img src="Images/robo.jpg" alt="an image">
+        </div>
+      </div>
+
+    </div>
+    <!-- END First Section -->
+
+
+    <!-- ── SECOND SECTION: Info Cards ── -->
+    <div class="S_container">
+      <div class="Info">Some random Information</div>
+      <div class="box">
+
+        <!-- FIXED: removed align-content, align-items, justify-content from individual
+             box1 divs — alignment is now handled properly in CSS using flexbox -->
+        <div class="box1">
+          <div class="bo1"></div>
+          <div class="text">this is some subtext under an illustration or image</div>
+        </div>
+
+        <div class="box1">
+          <div class="bo1"></div>
+          <div class="text">this is some subtext under an illustration or image</div>
+        </div>
+
+        <div class="box1">
+          <div class="bo1"></div>
+          <div class="text">this is some subtext under an illustration or image</div>
+        </div>
+
+        <div class="box1">
+          <div class="bo1"></div>
+          <div class="text">this is some subtext under an illustration or image</div>
+        </div>
+
+      </div>
+    </div>
+    <!-- END Second Section -->
+
+
+    <!-- ── THIRD SECTION: Quote ── -->
+    <div class="container2">
+      <!-- FIXED: changed <div> to <p> for the quote — semantically a paragraph 
+           is more correct for a block of text like a quote -->
+      <p class="tet">This is an inspiring quote, or a testimonial from a customer. Maybe it's just 
+        filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice.</p>
+      <div class="te">-Thor, God of Thunder</div>
+    </div>
+    <!-- END Third Section -->
+
+
+    <!-- ── FOURTH SECTION: Call to Action ── -->
+    <div class="container3">
+      <div class="action">
+        <div class="act">Call to action! It's time!</div>
+        <div class="ac">Sign up for our product by clicking that button right over there!</div>
+      </div>
+      <button class="sign">Sign up</button>
+    </div>
+    <!-- END Fourth Section -->
+
+
+    <!-- ── FOOTER ── -->
+    <!-- FIXED: you were reusing .tet and .te classes here which brought italic styling
+         from the quote section into the footer. Replaced with a single clean span -->
+    <div class="footer">
+      <span>Copyright &copy; The Odin Project 2021</span>
+    </div>
+    <!-- END Footer -->
+
+  </div><!-- END .container -->
+
+</body>
+</html>

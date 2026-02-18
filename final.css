@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif; /* ADDED: you had no font-family, this makes text look cleaner */
+}
+
+/* ── OUTER WRAPPER ── */
+.container {
+  max-width: 900px;   /* ADDED: you had no max-width so content stretched too wide */
+  margin: 0 auto;     /* FIXED: you had margin: 0 200px — this caused the horizontal
+                         scrollbar because 200px on each side pushed content off screen.
+                         0 auto centres the container on any screen size without overflow */
+  border: solid 1px #ccc;
+}
+
+/* ── HEADER ── */
+.colour {
+  background-color: #1F2937;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;  /* FIXED: you had padding: 15px 100px — 100px side padding was
+                          too wide inside the container and pushed content off the edge */
+  align-items: center;
+}
+
+.left {
+  font-size: large;
+  color: white;
+  font-weight: bold;  /* ADDED: makes "Header Logo" bold to match the design */
+}
+
+ul {
+  display: flex;
+  gap: 16px;
+}
+
+a, h2, main {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* ── HERO SECTION ── */
+.Second {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  /* FIXED: you had this commented out — without it the text and
+                           image were not vertically aligned beside each other */
+  padding: 40px;        /* FIXED: you had padding: 15px 100px — vertical padding was too
+                           small and side padding too wide */
+  gap: 20px;            /* ADDED: breathing room between the text block and the image */
+}
+
+.In1 {
+  display: flex;
+  flex-direction: column; /* ADDED: stacks the heading, subtext, and button vertically */
+  gap: 12px;              /* ADDED: spaces them out so they don't sit on top of each other */
+  max-width: 50%;         /* ADDED: stops text from taking too much space and squishing image */
+}
+
+h2 {
+  font-size: 2rem;  /* ADDED: makes the hero heading large like in the design */
+}
+
+main {
+  font-size: 0.9rem;  /* ADDED: subtext should be smaller than the heading */
+  color: #ccc;        /* ADDED: lower contrast color as described in the design */
+}
+
+.button {
+  background-color: rgb(91, 139, 235);  /* FIXED: you had rgb(0,81,255) — too dark,
+                                           the design uses a lighter blue */
+  color: white;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: fit-content;  /* ADDED: without this the button stretched full width of .In1 */
+}
+
+img {
+  height: 200px;
+  width: 250px;       /* ADDED: gives image a fixed width so it doesn't collapse */
+  object-fit: cover;  /* ADDED: fills the box without stretching or distorting the image */
+  border-radius: 4px; /* ADDED: slight rounding matches the design */
+}
+
+/* ── INFO SECTION ── */
+.S_container {
+  padding: 40px 20px;  /* FIXED: you had padding: 14px — too small, section looked cramped */
+  text-align: center;  /* ADDED: centres the heading and all child content */
+}
+
+.Info {
+  font-size: 24px;
+  font-weight: 900;
+  margin-bottom: 24px;  /* ADDED: space between the heading and the four boxes below it */
+}
+
+.box {
+  display: flex;
+  justify-content: center;  /* FIXED: you had margin-left: 115px to manually push boxes
+                                to the centre — that only works on one screen size and
+                                breaks on others. justify-content: center works everywhere */
+  gap: 20px;
+  flex-wrap: wrap;          /* ADDED: boxes wrap to next line on smaller screens */
+  /* REMOVED: max-width: 600px and margin-left: 115px — both were causing misalignment */
+}
+
+.box1 {
+  display: flex;           /* ADDED: makes box1 a flex container */
+  flex-direction: column;  /* ADDED: stacks the blue square and text vertically */
+  align-items: center;     /* ADDED: centres both the square and text horizontally */
+  gap: 10px;               /* ADDED: space between the square and the text below it */
+  max-width: 130px;
+}
+
+.bo1 {
+  border: solid 2px blue;
+  height: 100px;
+  width: 100px;
+  border-radius: 8px;
+  /* REMOVED: margin-left: 20px — this was offsetting the box away from centre.
+     Centering is now handled cleanly by align-items: center in .box1 */
+}
+
+.text {
+  text-align: center;
+  font-size: 0.85rem;  /* ADDED: slightly smaller text fits better under the boxes */
+}
+
+/* ── QUOTE SECTION ── */
+.container2 {
+  background-color: rgba(33, 97, 152, 0.2);  /* FIXED: you had opacity 0.317 — too dark,
+                                                 0.2 matches the light grey-blue in the design */
+  padding: 60px 150px;
+  text-align: center;   /* ADDED: centres the quote text block */
+}
+
+.tet {
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 12px;  /* ADDED: space between the quote and the attribution line */
+  color: #333;          /* ADDED: dark grey so text is readable on light background */
+}
+
+.te {
+  font-weight: 900;
+  font-style: italic;
+  text-align: right;  /* ADDED: pushes "-Thor, God of Thunder" to the right side
+                         to match the design — you had no alignment set so it sat left */
+}
+
+/* ── CALL TO ACTION ── */
+.container3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  /* ADDED: vertically centres the text and button inside the bar —
+                           without this the button and text were not lined up */
+  padding: 18px 30px;   /* FIXED: you had padding: 10px — too small, content was cramped */
+  margin: 30px 40px;    /* FIXED: you had margin: 50px — too large, created too much
+                           empty space around the bar */
+  background-color: rgb(91, 139, 235);
+  border-radius: 5px;
+  /* REMOVED: height: 50px — fixed height squished the content inside the bar */
+}
+
+.act {
+  font-size: 18px;  /* FIXED: you had 20px — slightly too large for the bar */
+  font-weight: 700;
+  color: white;     /* ADDED: text color was not set so it appeared dark on the blue bar */
+}
+
+.ac {
+  font-size: 13px;  /* ADDED: smaller size for the subtitle text below the heading */
+  color: #eee;      /* ADDED: slightly off-white to contrast with the bold title above */
+}
+
+.sign {
+  background-color: rgb(0, 81, 255);
+  color: white;
+  padding: 8px 20px;
+  border: 1px solid white;  /* FIXED: you had border: 1px solid with no color specified —
+                                the border was invisible, added white to match the design */
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;  /* ADDED: prevents the button text "Sign up" from wrapping
+                           to a second line inside the bar */
+}
+
+/* ── FOOTER ── */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1F2937;
+  color: white;
+  padding: 16px;  /* ADDED: you had no padding so the footer had almost no height
+                     and the text was invisible */
+  /* FIXED: in your HTML you reused .tet and .te classes in the footer which brought
+     in italic styling from the quote section — simplified to a single span in HTML */
+}
